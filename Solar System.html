@@ -1,0 +1,311 @@
+ <!DOCTYPE html>
+   <head>  
+        <style>
+             body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center
+                ;
+                background-color:black
+                ;
+                overflow: hidden;
+             }
+             .container {
+                font-size: 10px;
+                width: 40em;
+                height: 40em;
+                position: relative;
+            }
+            .Sun {
+                position:absolute;
+                top: 15em;
+                left: 15em;
+                width: 10em;
+                height: 10em;
+                background-color: yellow;
+                border-radius: 50%;
+                box-shadow: 0 0 5em
+                white;
+                animation: ani 3s infinite;
+            }
+            .Mercury{
+                position:absolute;
+                border-style:solid ;
+                border-color: rgb(160, 103, 103)
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 0  0;
+                border-radius: 50%;
+
+            }
+            .Mercury{
+                top: 12em;
+                left: 12em;
+                width: 15.9em;
+                height:15.9em;
+                animation: orbit 5s linear infinite;
+
+            }
+            .Mercury::before{
+                content:'';
+                position: absolute;
+                border-radius: 50%;
+            }
+            .Mercury::before{
+                top: 1.7em;
+                right: 1em;
+                width: 2em;
+                height: 2em;
+                background-color: rgb(107, 106, 106);
+            }
+            .Venus{
+                position: absolute;
+                border-style: solid;
+                border-color: orangered
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 0;
+                border-radius: 50%;
+
+            }
+            .Venus{
+                top: 8.5em;
+                left: 8.5em;
+                width: 23em;
+                height: 23em;
+                animation: orbit 10s linear infinite;
+            }
+            .Venus::before{
+                content:'';
+                position: absolute;
+                border-radius: 50%;
+            }
+            .Venus::before{
+                top: 2em;
+                right: 1em;
+                width: 3.6em;
+                height: 3.6em;
+                background-color: #a57c1b;
+            }
+
+            .Earth, .Moon {
+                position: absolute;
+                border-style: solid;
+                border-color: white
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 
+                0 0;
+                border-radius: 50%;
+            }
+            .Earth {
+                top: 5em;
+                left: 5em;
+                width: 30em;
+                height: 30em;
+                animation: orbit 36.5s
+                linear infinite;
+            }
+            .Moon {
+                top: 0;
+                right: 0;
+                width: 8em;
+                height: 8em;
+                animation: orbit 2.7s
+                linear infinite;
+            }
+            .Earth::before,
+            .Moon::before {
+                content:'';
+                position: absolute;
+                border-radius: 50%;
+            }
+            .Earth::before {
+                top: 2.8em;
+                right: 2.8em;
+                width: 3em;
+                height: 3em;
+                background-color:#34A56F;
+             }
+             .Moon::before {
+                top: 0.8em;
+                right: 0.2em;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: silver;
+             }
+             .Mars{
+                position: absolute;
+                border-style: solid;
+                border-color: red
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+             }
+             .Mars{
+                top: -5em;
+                left: -5em;
+                width: 43em;
+                height: 43em;
+                animation: orbit 12s linear infinite;
+             }
+             .Mars::before{
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+             }
+             .Mars::before{
+                top: 5.7em;
+                right: 5.7em;
+                width: 2.5em;
+                height: 2.5em;
+                background-color: rgb(133, 7, 7);
+             }
+             @keyframes orbit {
+                to {
+                    transform: rotate(360deg);
+                }
+             }
+             .Jupiter{
+               position: absolute;
+               border-style: solid;
+               border-color: rgb(210, 207, 218)
+               transparent
+               transparent;
+               border-width: 0.1em 0.1em 0 0;
+               border-radius: 50%;
+             }
+             .Jupiter{
+               top: -11em;
+               left:-11em;
+               width: 55em;
+               height: 55em;
+               animation: orbit 24s linear infinite;
+             }
+             .Jupiter::before{
+               content: '';
+               position: absolute;
+               border-radius: 50%;
+             }
+             .Jupiter::before{
+               top: 7em;
+               right: 4em;
+               width: 5em;
+               height: 5em;
+               background-color: #a59186;
+             }
+             .Saturn{
+                position: absolute;
+                border-style: solid;
+                border-color: rgb(250, 229, 191)
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+             }
+             .Saturn{
+                top: -18.5em;
+                left: -18.5em;
+                width: 70em;
+                height: 70em;
+                animation: orbit 36s linear infinite;
+             }
+             .Saturn::before{
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+             }
+             .Saturn::before{
+                top: 5.7em;
+                right: 4em;
+                width: 10em;
+                height: 10em;
+                background-color: #c3924f;
+             }
+             .Uranus{
+               position: absolute;
+               border-style: solid;
+               border-color: rgb(172, 229, 228)
+               transparent
+               transparent;
+               border-width: 0.1em 0.1em 0 0;
+               border-radius: 50%;
+             }
+             .Uranus{
+               top: -28.4em;
+               left: -28.4em;
+               width: 90em;
+               height: 90em;
+               animation: orbit 40s linear infinite;
+             }
+             .Uranus::before{
+               content: '';
+               position: absolute;
+               border-radius: 50%;
+             }
+             .Uranus::before{
+               top: 12em;
+               right: 6em;
+               width: 8em;
+               height: 8em;
+               background-color: rgb(172, 229, 238);
+             }
+             .Neptune{
+                position: absolute;
+                border-style:solid ;
+                border-color: #2992B5
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+             }
+             .Neptune{
+                top: -36em;
+                left: -36em;
+                width: 105em;
+                height: 105em;
+                animation: orbit 48s linear infinite;
+             }
+             .Neptune::before{
+                content: '';
+                position: absolute;
+                border-radius: 50%
+             }
+             .Neptune::before{
+                top: 14em;
+                right: 9em;
+                width: 7em;
+                height: 7em;
+                background-color: #2992B5;
+             }
+             
+        </style>
+          <body>
+            <div class="container">
+                <div class="Sun"></div>
+                <div class="Mercury"></div>
+                    <div class="Venus"></div>
+                        <div class="Earth">
+                            <div class="Moon"></div></div>
+                            <div class="Mars"></div>
+                            <div class="Jupiter"></div>
+                            <div class="Saturn"></div>
+                            <div class="Uranus"></div>
+                            <div class="Neptune"></div>
+                        </body>
+                        </html>
+
+            
+            
+            
+        
+    
+
+            
+            
+            
+        
+    
